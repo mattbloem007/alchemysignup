@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import addToMailchimp from 'gatsby-plugin-mailchimp'
+
 
 export class EmailForm extends Component {
   constructor() {
@@ -10,6 +12,14 @@ export class EmailForm extends Component {
   onSubmit(e) {
     e.preventDefault();
     e.stopPropagation();
+    let email = encodeURI(this.dataEmail.value)
+    console.log("EMAIL: ", email)
+    addToMailchimp(email)
+    .then(data => {
+      console.log(data)
+    })
+    .catch(() => {
+    })
     this.setState({ message: 'Thank you!' });
     setTimeout(() => {
       this.setState({ message: '' });
@@ -19,12 +29,14 @@ export class EmailForm extends Component {
   render() {
     const { message } = this.state;
     return (
-      <form id="signup-form" onSubmit={this.onSubmit} method="post" action="#">
+      <form id="signup-form" onSubmit={this.onSubmit} method="post">
         <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email Address"
+            type="email"
+            ref={c => (this.dataEmail = c)}
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            required
         />
         <input type="submit" value="Sign Up" />
         <span className={`${message ? 'visible success' : ''} message`}>
