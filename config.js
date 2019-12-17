@@ -1,37 +1,32 @@
 module.exports = {
-  siteTitle: 'Gatsby Starter Eventually', // <title>
-  manifestName: 'Eventually',
-  manifestShortName: 'Landing', // max 12 characters
+  siteTitle: 'The Alchemy of Remembrance Signup', // <title>
+  manifestName: 'The Alchemy of Remembrance Signup',
+  manifestShortName: 'Signup', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
-  manifestIcon: 'src/assets/img/website-icon.png',
+  manifestIcon: 'src/assets/images/Alchemy of Remembrance Logo.png',
   pathPrefix: `/gatsby-starter-eventually/`, // This path is subpath of your hosting https://domain/portfolio
   // social
-  heading: 'Eventually',
+  heading: 'The Alchemy of Remembrance Signup',
   subHeading:
-    "A simple template for telling the world when you'll launch your next big thing.",
+    "Signup to receive all the news and happenings of The Alchemy of Remembrance",
   socialLinks: [
-    {
-      icon: 'fa-github',
-      name: 'Github',
-      url: 'https://github.com/anubhavsrivastava',
-    },
-    {
-      icon: 'fa-twitter',
-      name: 'Twitter',
-      url: 'https://twitter.com/onlyanubhav',
-    },
     {
       icon: 'fa-facebook',
       name: 'Facebook',
-      url: 'https://facebook.com/theanubhav',
+      url: 'https://www.facebook.com/alchemyremembrance/',
     },
     {
-      icon: 'fa-envelope-o',
-      name: 'Email',
-      url: 'mailto:anubhav.srivastava00@gmail.com',
+      icon: 'fa-instagram',
+      name: 'Instagram',
+      url: 'https://www.instagram.com/alchemyofremembrance/'
+    },
+    {
+      icon: 'fa-youtube',
+      name: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCMuZwqrNoHY6-wRrDVfCKLg/'
     },
   ],
 };

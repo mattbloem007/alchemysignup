@@ -20,11 +20,11 @@ module.exports = {
       },
     },
     {
-        resolve: 'gatsby-plugin-mailchimp',
-        options: {
-            endpoint: 'https://openinglotus.us11.list-manage.com/subscribe/post?u=9cbcbcf27f6ab9d34faa34d6a&amp;id=697dfbc5d0', // add your MC list endpoint here; see instructions below
-        },
-    },
+       resolve: 'gatsby-plugin-mailchimp',
+       options: {
+           endpoint: 'https://netlify.us4.list-manage.com/subscribe/post?u=4bb341a70f699ab5f28026c9b&amp;id=4899fd0d31', // add your MC list endpoint here; see instructions below
+       },
+   },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],
