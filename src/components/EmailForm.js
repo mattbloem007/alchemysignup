@@ -20,7 +20,7 @@ export class EmailForm extends Component {
     })
     .catch(() => {
     })
-    this.setState({ message: 'Thank you!' });
+    this.setState({ message: 'Thank you! An email will be sent to you soon :)' });
     setTimeout(() => {
       this.setState({ message: '' });
     }, 3000);
