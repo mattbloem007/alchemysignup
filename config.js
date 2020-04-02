@@ -9,9 +9,9 @@ module.exports = {
   manifestIcon: 'src/assets/images/Alchemy of Remembrance Logo.png',
   pathPrefix: `/gatsby-starter-eventually/`, // This path is subpath of your hosting https://domain/portfolio
   // social
-  heading: 'The Alchemy of Remembrance Signup',
+  heading: 'The Alchemy of Remembrance - Taoist Meditation Signup',
   subHeading:
-    "Signup to receive all the news and happenings of The Alchemy of Remembrance",
+    "Signup to receive the Taoist Meditation Info from The Alchemy of Remembrance",
   socialLinks: [
     {
       icon: 'fa-facebook',

@@ -14,7 +14,9 @@ export class EmailForm extends Component {
     e.stopPropagation();
     let email = encodeURI(this.dataEmail.value)
     console.log("EMAIL: ", email)
-    addToMailchimp(email)
+    addToMailchimp(email, {
+      'group[62892][8]': '8'
+    })
     .then(data => {
       console.log(data)
     })
@@ -31,9 +33,9 @@ export class EmailForm extends Component {
     return (
       <form id="signup-form" onSubmit={this.onSubmit} method="post">
         <input
+            name="group[62892][8]"
             type="email"
             ref={c => (this.dataEmail = c)}
-            name="email"
             id="email"
             placeholder="Email Address"
             required
