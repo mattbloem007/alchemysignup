@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp'
+import emailjs from 'emailjs-com';
 
 
 export class EmailForm extends Component {
@@ -18,7 +19,22 @@ export class EmailForm extends Component {
       'group[62892][8]': '8'
     })
     .then(data => {
-      console.log(data)
+      console.log(data.result)
+
+      if (data.result == "error") {
+
+        var template_params = {
+                   "reply_to": email,
+                   "from_name": "unknown",
+                   "to_name": "Matthew Gabriel",
+                   "message_html": email + " already exists but wishes to be part of the Tao"
+                }
+
+                var service_id = "default_service";
+                var template_id = "template_m9OkeQLI";
+                var user_id = "user_wLPGPl2w2ETFdTUDNZQP2";
+                emailjs.send(service_id, template_id, template_params, user_id);
+      }
     })
     .catch(() => {
     })
