@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import addToMailchimp from 'gatsby-plugin-mailchimp'
 import emailjs from 'emailjs-com';
 
 
@@ -14,30 +13,27 @@ export class EmailForm extends Component {
     e.preventDefault();
     e.stopPropagation();
     let email = encodeURI(this.dataEmail.value)
+    let name = encodeURI(this.dataName.value)
     console.log("EMAIL: ", email)
-    addToMailchimp(email, {
-      'group[62892][8]': '8'
-    })
-    .then(data => {
-      console.log(data.result)
 
-      if (data.result == "error") {
+    var template_params = {
+               "reply_to": email,
+               "from_name": "Matthew Gabriel",
+               "to_name": name,
+               "message": "Thank you for joining the Nutritional Technology call. You are booked and you will receive another email before the call with the zoom link and instructions to offer a donation"
+            }
 
-        var template_params = {
-                   "reply_to": email,
-                   "from_name": "unknown",
-                   "to_name": "Matthew Gabriel",
-                   "message_html": email + " already exists but wishes to be part of the Tao"
-                }
+    var service_id = "service_ifs4l2e";
+    var template_id = "template_hqpw4qn";
+    var user_id = "user_E7hnIvNfEqvZm2avmHiqG";
+    try {
+      emailjs.send(service_id, template_id, template_params, user_id)
+    }
+    catch(e) {
+      console.log("ERROR", e)
+    }
 
-                var service_id = "default_service";
-                var template_id = "template_m9OkeQLI";
-                var user_id = "user_wLPGPl2w2ETFdTUDNZQP2";
-                emailjs.send(service_id, template_id, template_params, user_id);
-      }
-    })
-    .catch(() => {
-    })
+
     this.setState({ message: 'Thank you! An email will be sent to you soon :)' });
     setTimeout(() => {
       this.setState({ message: '' });
@@ -48,6 +44,14 @@ export class EmailForm extends Component {
     const { message } = this.state;
     return (
       <form id="signup-form" onSubmit={this.onSubmit} method="post">
+      <input
+          name="name"
+          type="text"
+          ref={c => (this.dataName = c)}
+          id="name"
+          placeholder="Name"
+          required
+      />
         <input
             name="group[62892][8]"
             type="email"
