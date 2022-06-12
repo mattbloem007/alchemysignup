@@ -9,9 +9,9 @@ module.exports = {
   manifestIcon: 'src/assets/images/Alchemy of Remembrance Logo.png',
   pathPrefix: `/gatsby-starter-eventually/`, // This path is subpath of your hosting https://domain/portfolio
   // social
-  heading: 'The Alchemy of Remembrance - Taoist Meditation Signup',
+  heading: 'Nutritional Technology - Nervous System',
   subHeading:
-    "Signup to receive the Taoist Meditation Info from The Alchemy of Remembrance",
+    "Signup to an evening gathering to discuss how to nourish and strengthen our nervous system through nutrition with Matthew Gabriel",
   socialLinks: [
     {
       icon: 'fa-facebook',
