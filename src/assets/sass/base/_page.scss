@@ -52,7 +52,7 @@ body,
 .main-body {
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
-  @include vendor('justify-content', 'center');
+  
   background-color: _palette(bg);
   padding: 6em 4em 4em 4em;
 

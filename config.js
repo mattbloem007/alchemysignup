@@ -9,9 +9,9 @@ module.exports = {
   manifestIcon: 'src/assets/images/Alchemy of Remembrance Logo.png',
   pathPrefix: `/gatsby-starter-eventually/`, // This path is subpath of your hosting https://domain/portfolio
   // social
-  heading: 'Nutritional Technology - Nervous System',
+  heading: 'Cleansing 101 ~ Hydration Transmission',
   subHeading:
-    "Signup to an evening gathering to discuss how to nourish and strengthen our nervous system through nutrition with Matthew Gabriel",
+    "Join us for an online transmission on the importance of hydration and how to create healthy habits to increase hydration throughout the day.",
   socialLinks: [
     {
       icon: 'fa-facebook',
